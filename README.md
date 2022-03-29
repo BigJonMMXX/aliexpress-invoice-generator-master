@@ -1,5 +1,18 @@
 # AliExpress Invoice Generator
 
+March 2022
+i desperately need an invoice generater for aliexpress purchases
+the new version replacing this plugin just doesnt work, so...
+
+i got the buttons showing, 
+just need to scrape data...
+
+
+
+
+
+original stuff-------------------
+
 This is a browser extension for generating PDF invoices from [AliExpress] order detail
 websites. At the time of implementing this, AliExpress didn't offer any downloadable
 invoice format. Existing add-ons were closed source and looked rather phishy so I decided
