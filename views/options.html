@@ -1,0 +1,63 @@
+<!--
+  Copyright 2019, 2020 Johannes Marbach
+
+  This file is part of AliExpress Invoice Generator, hereafter referred
+  to as the program.
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+    <form>
+      <label for="page-size">Page size</label>
+      <select id="page-size" name="page-size">
+        <option value="A4">A4</option>
+        <option value="LETTER">US letter</option>
+      </select>
+      <br/>
+      <br/>
+      <label for="font">Font</label>
+      <select id="font" name="font">
+        <option value="droid-sans">Droid Sans</option>
+        <option value="helvetica">Helvetica</option>
+        <option value="times">Times</option>
+      </select>
+      <br/>
+      <br/>
+      <input type="checkbox" name="buyer-from-order"/>
+      <label for="buyer-from-order">Include buyer info from order details</label>
+      <br/>
+      <br/>
+      <label for="buyer-extra-info">Additional lines for buyer section</label>
+      <br/>
+      <textarea id="buyer-extra-info" name="buyer-extra-info" rows="4" cols="50" placeholder="VAT No. 12345689"></textarea>
+    </form>
+    <p>
+      Supported invoice languages: English, German, Italian (language selected based on browser / OS locale)
+    </p>
+    <p>
+      <a target="_blank" href="onboard.html">How to use this add-on</a> | <a target="_blank" href="upboard.html">Changelog</a> | <a target="_blank" href="https://github.com/Johennes/aliexpress-invoice-generator">Source code</a>
+    </p>
+    <p>
+      Got an issue or an idea or want to help translate? Feel free to <a href="mailto:n0-0ne+aliexpress-invoice-generator@mailbox.org">reach out</a>.
+    </p>
+    <script type="application/javascript" src="../browser-polyfill.js"></script>
+    <script type="application/javascript" src="options.js"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+{
+  "manifest_version": 2,
+  "name": "AliExpress Invoice Generator",
+  "version": "3.1.2",
+  "description": "Generates PDF invoices from AliExpress order detail websites",
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png"
+  },
+  "background": {
+    "scripts": ["browser-polyfill.js", "background.js"]
+  },    
+  "content_scripts": [
+    {
+     "matches": ["*://*.aliexpress.com/*"],
+      "js": ["browser-polyfill.js", "pdfkit.standalone.js", "content.js"]
+    }
+  ],
+  "page_action": {
+    "browser_style": true,
+    "default_icon": {
+      "19": "icons/icon-19.png",
+      "38": "icons/icon-38.png"
+    },
+    "default_title": "Generate PDF Invoice",
+    "show_matches": ["*://*.aliexpress.com/*"]
+  },
+  "options_ui": {
+    "page": "views/options.html",
+    "browser_style": true
+  },
+  "web_accessible_resources": [
+    "aliexpress.png",
+    "fonts/DroidSansFallback.ttf",
+    "fonts/DroidSans-Bold.ttf",
+    "icons/icon-128.png",
+    "screenshots/onboarding-1.png",
+    "screenshots/onboarding-1-chrome.png",
+    "screenshots/onboarding-2.png",
+    "screenshots/onboarding-3.png",
+    "screenshots/onboarding-3-chrome.png"
+  ],
+  "permissions": [
+    "storage",
+    "downloads"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{b528e080-bcc1-4f58-89b8-da9a54df78b2}"
+    }
+  },
+  "default_locale": "en"
+}
